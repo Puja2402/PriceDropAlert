@@ -22,11 +22,11 @@ def send_mail():
     server.starttls()
     server.ehlo()
 
-    server.login('baerdo2427@gmail.com','wslhwhhpwnrjyhtq')
+    server.login('sender email','gmail password')
     subject='Price fell down!'
     body='Check the amazon link https://www.amazon.in/Test-Exclusive-611/dp/B07HGMLBW1/ref=hsx_crw_1389401031_tl_4?pf_rd_p=3e57ae7f-1906-4860-9c24-5582dcc9cbb3&pf_rd_s=merchandised-search-20&pf_rd_t=101&pf_rd_i=1389401031&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_r=ENGRSPKCV4BM3791N06B&pf_rd_r=ENGRSPKCV4BM3791N06B&pf_rd_p=3e57ae7f-1906-4860-9c24-5582dcc9cbb3'
     msg=f"Subject:{subject}\n\n{body}"
-    server.sendmail('baerdo2427@gmail.com','ursadodesign@gmail.com',msg)
+    server.sendmail('sender email','reciever email',msg)
     print("SENT!")
     server.quit()
 check_price()
